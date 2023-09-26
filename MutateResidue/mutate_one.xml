@@ -1,0 +1,13 @@
+<ROSETTASCRIPTS>
+  <SCOREFXNS>
+    <ScoreFunction name="scorefxn" />
+  </SCOREFXNS>
+  <RESIDUE_SELECTORS>
+  </RESIDUE_SELECTORS>
+  <MOVERS>
+    <MutateResidue name="mutate1" target="12A" new_res="YHA" />
+  </MOVERS>
+  <PROTOCOLS>
+    <Add mover_name="mutate1" />
+  </PROTOCOLS>
+</ROSETTASCRIPTS>

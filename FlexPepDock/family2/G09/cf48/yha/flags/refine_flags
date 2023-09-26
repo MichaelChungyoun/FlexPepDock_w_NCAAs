@@ -1,0 +1,14 @@
+-s input/G09_cfc48_yha_0001.pdb        # the prepacked structure will be used as the input structure for refinement
+-ex1                                  # extra rotamers for chi-1 angles used during packing  
+-ex2aro                               # extra rotamers for aromatic chi-2 angles used during packing
+-use_input_sc                         # add the starting structure's rotamers to the rotamer library
+-unboundrot input/G09.pdb             # add position-sepcific rotamers to the rotamer library (most useful for including rotamers of unbound receptor if available) 
+-receptor_chain H,L                   # name of antibody chains in PDB
+-flexPepDocking:peptide_chain A       # chain-id of peptide protein
+-pep_refine                           # flag for running FlexPepDock refinement 
+-nstruct 1000                         # create 300 refined structure
+-flexpep_score_only                   # add FlexPepDock specific scores to the scorefile
+-scorefile refine.score.sc            # name of the scorefile
+-out:path:pdb output                  # location of the refined structure
+-out:path:score output                # location of the scorefile
+-extra_res_fa /Users/michaelchungyoun/redo_rosetta/main/database/chemical/residue_type_sets/fa_standard/residue_types/l-ncaa/CIR.params
